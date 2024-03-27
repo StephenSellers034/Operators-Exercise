@@ -11,19 +11,21 @@
             int product = a * b;
             int quotient = a / b;
             int remainder = a % b;
-            Console.WriteLine($"{a}/{b} is {quotient} remainder {remainder}.");
+            AreaOfCircle(20);
+            Console.WriteLine($"{a}/{b} is {quotient} remainder {remainder}.");            
             Console.WriteLine("What is the radius of your circle?");
             double radius = double.Parse(Console.ReadLine());
-            AreaOfCircle(20);
             Console.WriteLine($"The area of a circle with radius of 20 is {AreaOfCircle(20)}");
-           
-            
+
         }
 
         public static double AreaOfCircle(double radius)
         {
-           double area = Math.PI * radius * radius;
+           
+            double area = Math.PI * Math.Pow(radius, 2);
             return area;
+             
         }
+        
     }
 }
